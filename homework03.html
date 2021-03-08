@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <style>
+      body {
+        font-family: Consolas, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <p>jbAry : One,Two,Three,Four,Five,Six</p>
+    <hr>
+    <p><strong>var jbSplice = jbAry.splice( 2, 3 );</strong></p>
+    <p>
+      <script>
+        var jbAry = [ 'One', 'Two', 'Three', 'Four', 'Five', 'Six' ];
+        var jbSplice = jbAry.splice( 2, 3 );
+        document.write( '<p>jbAry : ' + jbAry + '</p>' );
+        document.write( '<p>jbSplice : ' + jbSplice + '</p>' );
+      </script>
+    </p>
+    <p><strong>var jbSplice = jbAry.splice( 1, 2, 'Seven', 'Eight' );</strong></p>
+    <p>
+      <script>
+        var jbAry = [ 'One', 'Two', 'Three', 'Four', 'Five', 'Six' ];
+        var jbSplice = jbAry.splice( 1, 2, 'Seven', 'Eight' );
+        document.write( '<p>jbAry : ' + jbAry + '</p>' );
+        document.write( '<p>jbSplice : ' + jbSplice + '</p>' );
+      </script>
+    </p>
+  </body>
+</html>

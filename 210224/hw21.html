@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    a:link { color: orange; }
+
+    a:visited { color: green; }
+
+    a:hover { font-weight: bold; }
+
+    a:active { color: blue; }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+      color: red;
+    }
+    </style>
+  </head>
+<body>
+  <a href="#" target="_blank">This is a link</a><br>
+  <input type="text" value="I'll be red when focused"><br>
+  <input type="password" value="I'll be red when focused">
+</body>
+</html>

@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ko" data-platform="pc" data-useragent="mozilla/5.0 (x11; linux x86_64) applewebkit/537.36 (khtml, like gecko) chrome/88.0.4324.150 safari/537.36">
+<head>
+    <link rel="stylesheet" href="css/hw02.css">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="네이버 날씨">
+<meta property="og:url" content="http://weather.naver.com/news/02465102">
+<meta property="og:image" content="https://ssl.pstatic.net/static/weather/m/og_weather.png">
+<meta property="og:description" content="국내외 날씨와 미세먼지에 대한 종합정보 제공">
+<link rel="shortcut icon" href="https://ssl.pstatic.net/static/www/nFavicon24.png" type="image/x-icon">
+<link rel="preload" href="https://ssl.pstatic.net/static/weather/font/NotoSans-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://ssl.pstatic.net/static/weather/font/NotoSans-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://ssl.pstatic.net/static/weather/font/NotoSans-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://ssl.pstatic.net/static/weather/font/NotoSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://ssl.pstatic.net/static/weather/font/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://ssl.pstatic.net/static/weather/font/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://ssl.pstatic.net/static/weather/font/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://ssl.pstatic.net/static/weather/font/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="apple-touch-icon-precomposed" href="https://ssl.pstatic.net/static/weather/web_icon/web_iOS_iPhone_2x_120X120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://ssl.pstatic.net/static/weather/web_icon/web_iOS_iPad_2x_152X152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="https://ssl.pstatic.net/static/weather/web_icon/web_iOS_iPadPro_2x_167X167.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://ssl.pstatic.net/static/weather/web_icon/web_iOS_iPhone_3x_180X180.png">
+<title>네이버 날씨</title>
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/staticv2.weather/responsive/css/weather_webfont_202102251835.css">
+      </head>
+<body>
+    <div id="wrap" data-region-code="02465102" class="">
+        <div id="header" role="banner" class=" shadow">
+<div class="gnb_area">
+    <div class="content_inner">
+        <h1 class="logo_area">
+            <a href="https://www.naver.com" class="logo" onclick="nclk_v2(this, 'gnb.naver', '', '')"><span class="blind">NAVER</span></a>
+            <span class="blind">날씨</span>
+        </h1>
+        <div class="location_area">
+            <span class="blind">현위치</span>
+            <strong class="location_name">수지구 죽전동</strong>
+            <button type="button" class="btn_location" data-loading-class="loading" onclick="nclk_v2(this, 'gnb.curloc', '', '')"><span class="blind">내위치 찾기</span></button>
+        </div>
+         <div class="button_group">
+            <button type="button" class="btn_search _cnSearchPopup" onclick="nclk_v2(this, 'gnb.search', '', '')">
+                <span class="icon_animation">
+                    <span class="icon_search"></span>
+                </span>
+                <span class="blind">검색 펼치기</span>
+            </button>
+            <div class="layer_search">
+<h2 class="blind">도시 별 날씨 검색</h2>
+<div class="layer_content">
+    <div class="form_wrap">
+        <form name="search" role="search" onsubmit="$('.search_inner .btn_search').trigger('click'); return false;">
+            <span class="search_inner">
+                <input id="_idSearchInput" type="search" placeholder="국내, 해외도시를 검색해보세요" title="도시 검색창" autocomplete="off" class="search_input">
+                <span class="focus_border_white"></span>
+                <button type="submit" class="btn_search _cnSearchSubmit" onclick="nclk_v2(this, 'sch.schbut', '', '')"><span class="blind">검색</span></button>
+                <button type="reset" class="btn_cancle"><span class="blind">검색 취소</span></button>
+            </span>
+        </form>
+    </div>
+    <div id="_idSearchRecent" class="weather_list_area">
+<h2 class="blind">최근 검색 지역 목록</h2>
+<div class="scroll_control end_left">
+    <div class="scroll_area" data-name="recentRegion" data-click="true">
+        <ul class="card_list">
+            <li class="card_item nation active">
+                <a href="/today?targetId=nation" class="link_nation"><strong>전국 날씨 바로가기</strong></a>
+            </li>
+            <li class="card_item level4_1">
+                                <a href="/today/02465102" class="link" data-region-code="02465102" onclick="nclk_v2(this, 'sch.recschclk', '', '')">
+                                    <strong class="title">수지구 죽전동</strong>
+                                    <div class="weather_area">
+                                        <i class="ico ico_wt1"></i>
+                                        <div class="info">
+                                            <span class="info_inner">
+                                                <em class="temperature">14°</em>
+                                                <span class="weather">맑음</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="dust_area">
+                                        <span class="dust_item">
+                                            <span class="ttl">미세<span class="del">먼지</span></span>
+                                            <span class="mark">좋음<strong>19</strong></span>
+                                                </span>
+                                        <span class="dust_item"><span class="ttl">초미세<span class="del">먼지</span> </span>
+                                            <span class="mark">좋음<strong>8</strong></span>
+                                                </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="button_delete" onclick="nclk_v2(this, 'sch.recschccl', '', '')"><span class="blind">목록 삭제</span></button>
+                            </li>
+                        </ul>
+    </div>
+    <button type="button" class="btn_prev"><span class="blind">이전 보기</span></button>
+    <button type="button" class="btn_next"><span class="blind">다음 보기</span></button>
+</div>
+</div><div id="_idAutoCompleted" class="keyword_autocomplete hide">
+<h2 class="blind">검색어 자동 완성</h2>
+<ul class="keyword_list">
+
+</ul>
+</div><div id="_idsearchResultContainer" class="search_result hide">
+
+</div></div>
+</div>
+<span class="btn_forecast"><button type="button" class="btn" onclick="nclk_v2(this, 'gnb.tointfc', '', '')"><span class="blind">날씨 예보 펼치기</span></button></span>
+            </div>
+    </div>
+</div>
+<div class="lnb_area" role="menubar">
+    <ul class="lnb" role="menubar">
+        <li class="item" role="presentation"><a href="/today/02465102" class="menu" role="menuitem" onclick="nclk_v2(this, 'gnb.weathertab', '', '')">날씨</a></li>
+        <li class="item" role="presentation"><a href="/air/02465102" class="menu" role="menuitem" onclick="nclk_v2(this, 'gnb.dusttab', '', '')">미세먼지</a></li>
+            <li class="item" role="presentation"><a href="/video/02465102" class="menu" role="menuitem" onclick="nclk_v2(this, 'gnb.mvtab', '', '')">대기영상</a></li>
+        <li class="item" role="presentation"><a href="/map/02465102" class="menu" role="menuitem" onclick="nclk_v2(this, 'gnb.maptab', '', '')">지도</a></li>
+        <li class="item on" role="presentation"><a href="/news/02465102" class="menu" role="menuitem" onclick="nclk_v2(this, 'gnb.newtab', '', '')">뉴스</a><span class="blind">선택됨</span></li>
+        </ul>
+</div>
+
+</div><div id="container" role="main" class="is_news">
+<div id="content">
+    <div class="section_center NO_TAP_HIGHLIGHT">        <div class="card card_headline">
+        <h2 class="blind">헤드라인 뉴스</h2>
+        <div class="tit_clst">
+            <a href="https://news.naver.com/main/clusterArticles.nhn?id=c_202102260640_00000058&amp;mode=LSD&amp;mid=shm&amp;sid1=103" class="link_clst" onclick="nclk_v2(this, 'nws.clutop', '', '')">
+                <div class="num"><span class="blind">관련 뉴스</span>11<span class="blind">개</span></div>
+                <div class="tag">
+                        <strong class="item">낮 기온 쑥 </strong>
+                        <strong class="item">포근…대기 건조 </strong>
+                </div>
+                <i class="ico_arr"><span class="blind">더보기</span></i>
+            </a>
+        </div>
+        <div class="wn_wrap">
+                    <div class="wn_item">
+                        <a href="https://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=103&amp;oid=057&amp;aid=0001552572" class="thumb_area" onclick="nclk_v2(this, 'nws.clunlist', '', '')">
+                            <img class="thumb" src="https://mimgnews.pstatic.net/image/origin/057/2021/02/26/1552572.jpg?type=f719_413" onerror="this.parentNode.className += ' thumb_ready';" alt="정월대보름 포근, 큰 일교차…건조·강풍 주의">
+                                <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                        </a>
+                        <div class="tit_area">
+                            <a href="https://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=103&amp;oid=057&amp;aid=0001552572" class="link_tit" onclick="nclk_v2(this, 'nws.clunlist', '', '')">
+                                <strong class="tit_news">정월대보름 포근, 큰 일교차…건조·강풍 주의</strong>
+                                <p class="dsc_news">&lt;1&gt;정월 대보름인 오늘 크게 벌어지는 일교차를 주의하셔야겠습니다. 아침 기온 어제보다 높게 출발하고 있는데요. 낮 기온은 더 껑충 올라서 서울과 광주 16도, 춘천 14도로 4월 상순만큼이나 포근하겠습니다. &lt;2&gt;</p>
+                            </a>
+                            <div class="info_media">
+                                <span class="info_press">MBN</span>
+                                <span class="info_time">1일전</span>
+                            </div>
+                        </div>
+                    </div>
+            <div class="line_wn_wrap">
+                <ul>
+                        <li class="line_wn_item">
+                            <span class="item_inner">
+                                <span class="info_press">뉴스1</span>
+                                <a href="https://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=103&amp;oid=421&amp;aid=0005189332" class="tit_news" onclick="nclk_v2(this, 'nws.clunlist', '', '')">출근길 대부분 영상권이나 남해안·제주 강풍…낮에는 10~15도 '포근'</a>
+                            </span>
+                        </li>
+                        <li class="line_wn_item">
+                            <span class="item_inner">
+                                <span class="info_press">YTN</span>
+                                <a href="https://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=103&amp;oid=052&amp;aid=0001556051" class="tit_news" onclick="nclk_v2(this, 'nws.clunlist', '', '')">[날씨] 포근하지만 중부 대기 건조...남해안·제주도 강풍</a>
+                            </span>
+                        </li>
+                        <li class="line_wn_item">
+                            <span class="item_inner">
+                                <span class="info_press">YTN</span>
+                                <a href="https://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=103&amp;oid=052&amp;aid=0001556003" class="tit_news" onclick="nclk_v2(this, 'nws.clunlist', '', '')">[날씨] 낮 기온 '쑥', 서울 16℃...중부 대기 건조, 남해안 강풍</a>
+                            </span>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <div class="notice">
+            <p class="txt">날씨 헤드라인 뉴스와 기사 묶음 타이틀은 기사 내용을 기반으로 자동 추출됩니다.</p>
+        </div>
+    </div>
+
+        <div class="card card_newslist">
+<ul class="wn_list_wrap">
+    <li class="wn_item _cnNewsPage1">
+                <a class="thumb_area" href="#" data-oid="003" data-aid="0010367353" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://mimgnews.pstatic.net/image/origin/003/2021/02/27/10367353.jpg?type=f719_413" onerror="this.parentNode.className += ' thumb_ready';" alt="'완연한 봄' 공원엔 상춘객들 북적…위험천만 거리두기">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="003" data-aid="0010367353" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">'완연한 봄' 공원엔 상춘객들 북적…위험천만 거리두기</strong>
+                            <p class="dsc_news">[서울=뉴시스] 이기상 기자, 신재현 수습기자, 박현준 수습기자 = 신종 코로나바이러스 감염증(코로나19) 백신 접종이 시작된 후 처음 맞는 주말, 15도까지 오른 서울 낮 기온에 서울 도심 곳곳은 나들이 나온 시민</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">뉴시스</span>
+                            <span class="info_time">18분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage1">
+                <a class="thumb_area" href="#" data-oid="052" data-aid="0001556481" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://mimgnews.pstatic.net/image/origin/052/2021/02/27/1556481.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 내일도 맑고 포근, 큰 일교차...삼일절 전국 비">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="052" data-aid="0001556481" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 내일도 맑고 포근, 큰 일교차...삼일절 전국 비</strong>
+                            <p class="dsc_news">[앵커] 오늘에 이어 휴일인 내일도 온화한 날씨가 이어지겠습니다. 맑고 포근한 날씨에 나들이 즐기는 시민들이 많다고 하는데요, 하지만 사회적 거리두기 조치가 2주 더 연장된 만큼, 방역 수칙 준수에 더욱 신경 쓰셔야</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">YTN</span>
+                            <span class="info_time">19분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage1">
+                <a class="thumb_area" href="#" data-oid="422" data-aid="0000473438" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://mimgnews.pstatic.net/image/origin/422/2021/02/27/473438.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 성큼 다가온 봄…포근한 연휴·공기 깨끗">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="422" data-aid="0000473438" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 성큼 다가온 봄…포근한 연휴·공기 깨끗</strong>
+                            <p class="dsc_news">[앵커] 봄기운이 물씬 느껴지는 주말입니다. 전국이 포근한 가운데 공기도 미세먼지 없이 깨끗하겠는데요. 다만 남해안은 강한 바람이 불겠습니다. 자세한 날씨는 기상캐스터 연결해 알아봅니다. 한가현 캐스터. [캐스터] </p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">연합뉴스TV</span>
+                            <span class="info_time">33분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage1">
+                <a class="thumb_area" href="#" data-oid="052" data-aid="0001556475" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://mimgnews.pstatic.net/image/origin/052/2021/02/27/1556475.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 주말 예년보다 포근...수도권 건조주의보">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="052" data-aid="0001556475" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 주말 예년보다 포근...수도권 건조주의보</strong>
+                            <p class="dsc_news">이제 겨울 끝, 봄 시작인 듯합니다. 주말인 오늘 달력을 2월의 끝자락을 가리키고 있지만, 날씨만큼은 4월처럼 따스합니다. 오늘 서울 기온이 15.7도, 광주는 15.8도까지 오르며 예년 수준을 7~8도가량 크게 웃</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">YTN</span>
+                            <span class="info_time">49분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage1">
+                <a class="thumb_area" href="#" data-oid="422" data-aid="0000473430" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://mimgnews.pstatic.net/image/origin/422/2021/02/27/473430.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 봄처럼 포근한 연휴·공기 깨끗…남해안 강풍 주의">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="422" data-aid="0000473430" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 봄처럼 포근한 연휴·공기 깨끗…남해안 강풍 주의</strong>
+                            <p class="dsc_news">[앵커] 봄기운이 물씬 느껴지는 주말입니다. 전국이 포근한 가운데 공기도 미세먼지 없이 깨끗하겠는데요. 다만 남해안은 강한 바람이 불겠습니다. 자세한 날씨는 기상캐스터 연결해 알아봅니다. 한가현 캐스터. [캐스터] </p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">연합뉴스TV</span>
+                            <span class="info_time">1시간7분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage2" style="display:none">
+                <a class="thumb_area" href="#" data-oid="052" data-aid="0001556463" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/052/2021/02/27/1556463.jpg?type=f719_413" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 봄처럼 포근한 주말...'대기 건조' 산불 등 화재 유의">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="052" data-aid="0001556463" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 봄처럼 포근한 주말...'대기 건조' 산불 등 화재 유의</strong>
+                            <p class="dsc_news">[앵커] 주말인 오늘, 온화한 봄 날씨가 이어지며 거리에 나온 시민들이 많다고 합니다. 하지만 사회적 거리두기 조치가 2주 더 연장된 만큼, 방역 수칙 준수를 더욱 철저하게 하셔야겠습니다. 자세한 날씨와 도심 분위기</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">YTN</span>
+                            <span class="info_time">2시간전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage2" style="display:none">
+                <a class="thumb_area" href="#" data-oid="421" data-aid="0005192272" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/421/2021/02/27/5192272.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="토·일 맑고 포근한 봄날씨…월요일 3·1절에는 전국 비 소식">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="421" data-aid="0005192272" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">토·일 맑고 포근한 봄날씨…월요일 3·1절에는 전국 비 소식</strong>
+                            <p class="dsc_news">(서울=뉴스1) 박종홍 기자 = 토요일인 27일 수도권을 중심으로 한 맑고 포근한 봄날씨는 28일까지 이어질 전망이다. 다만 3·1절인 1일에는 전국적으로 비가 내릴 예정이다. 기상청은 27일~28일 전국이 동해북부</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">뉴스1</span>
+                            <span class="info_time">2시간20분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage2" style="display:none">
+                <a class="thumb_area" href="#" data-oid="468" data-aid="0000746569" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/468/2021/02/27/746569.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[오늘 날씨] 전국 대체로 맑음…'포근'">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="468" data-aid="0000746569" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[오늘 날씨] 전국 대체로 맑음…'포근'</strong>
+                            <p class="dsc_news">[스포츠서울 권오철 기자] 27일 기상청에 따르면 이날 전국이 대체로 맑은 날씨를 보이고 있다. 다만 강원 산지, 경북북동산지에서 눈 또는 비가 오고 있으며, 그 밖의 지역은 가끔 구름 많을 것으로 관측됐다. 낮 기</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">스포츠서울</span>
+                            <span class="info_time">2시간26분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage2" style="display:none">
+                <a class="thumb_area" href="#" data-oid="422" data-aid="0000473424" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/422/2021/02/27/473424.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 포근하고 공기 깨끗…중부 건조·남해안 강풍 주의">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="422" data-aid="0000473424" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 포근하고 공기 깨끗…중부 건조·남해안 강풍 주의</strong>
+                            <p class="dsc_news">[앵커] 봄기운이 물씬 느껴지는 주말입니다. 전국이 포근한 가운데 공기도 미세먼지 없이 깨끗하겠는데요. 다만 남해안은 강한 바람이 불겠습니다. 자세한 날씨는 기상캐스터 연결해 알아봅니다. 한가현 캐스터. [캐스터] </p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">연합뉴스TV</span>
+                            <span class="info_time">2시간32분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage2" style="display:none">
+                <a class="thumb_area" href="#" data-oid="422" data-aid="0000473413" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/422/2021/02/27/473413.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 먼지 없는 포근한 주말…남해안 강풍주의">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="422" data-aid="0000473413" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 먼지 없는 포근한 주말…남해안 강풍주의</strong>
+                            <p class="dsc_news">[앵커] 봄기운이 물씬 느껴지는 주말입니다. 전국이 포근한 가운데 공기도 미세먼지 없이 깨끗하겠는데요. 다만 남해안은 강한 바람이 불겠습니다. 자세한 날씨는 기상캐스터 연결해 알아봅니다. 한가현 캐스터. [캐스터] </p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">연합뉴스TV</span>
+                            <span class="info_time">3시간14분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage3" style="display:none">
+                <a class="thumb_area" href="#" data-oid="056" data-aid="0010997658" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/056/2021/02/27/10997658.jpg?type=f719_413" onerror="this.parentNode.className += ' thumb_ready';" alt="[12시 날씨] 오늘 맑고 따뜻…건조한 날씨에 강풍 ‘산불 조심’">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="056" data-aid="0010997658" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[12시 날씨] 오늘 맑고 따뜻…건조한 날씨에 강풍 ‘산불 조심’</strong>
+                            <p class="dsc_news"> 3월을 앞두고 따뜻한 봄 날씨가 펼쳐지겠습니다. 오늘 서울이 17도, 광주가 14도로 서쪽 지방은 평년 기온을 많게는 10도 이상 웃돌겠는데요. 다만 차고 습한 동풍이 불어오는 동해안 지방은 상대적으로 기온이 낮겠</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">KBS</span>
+                            <span class="info_time">3시간58분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage3" style="display:none">
+                <a class="thumb_area" href="#" data-oid="052" data-aid="0001556448" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/052/2021/02/27/1556448.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 주말, 맑고 포근한 봄 날씨...현행 거리두기 2주 연장">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="052" data-aid="0001556448" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 주말, 맑고 포근한 봄 날씨...현행 거리두기 2주 연장</strong>
+                            <p class="dsc_news">[앵커] 주말인 오늘, 대체로 맑고 예년보다 따뜻한 날씨가 이어지겠습니다. 날은 점점 풀리고 있지만, 코로나 19 재확산에 대한 우려로 현행 사회적 거리두기 조치는 2주 더 유지된다고 하는데요, 자세한 주말 날씨와 </p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">YTN</span>
+                            <span class="info_time">4시간1분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage3" style="display:none">
+                <a class="thumb_area" href="#" data-oid="052" data-aid="0001556435" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/052/2021/02/27/1556435.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 포근한 주말, 미세먼지 깨끗...중부 지역 대기 건조">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="052" data-aid="0001556435" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 포근한 주말, 미세먼지 깨끗...중부 지역 대기 건조</strong>
+                            <p class="dsc_news">[앵커] 주말인 오늘도 대체로 맑은 가운데, 예년보다 포근한 날씨가 이어지겠습니다. 미세먼지 걱정은 없겠지만, 중부 지역은 대기가 무척 건조하다고 합니다, 자세한 주말 날씨와 도심 풍경 알아봅니다. 홍나실 캐스터! </p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">YTN</span>
+                            <span class="info_time">5시간19분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage3" style="display:none">
+                <a class="thumb_area" href="#" data-oid="003" data-aid="0010367152" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/003/2021/02/27/10367152.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[다음주날씨]월요일 전국 눈·비…북서풍에 3~4일 영하">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="003" data-aid="0010367152" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[다음주날씨]월요일 전국 눈·비…북서풍에 3~4일 영하</strong>
+                            <p class="dsc_news">[서울=뉴시스] 이기상 기자 = 다음 주(3월1~7일)는 저기압의 영향으로 월요일부터 전국에 비 또는 눈이 내리기 시작해 화요일까지 이어지겠다. 차가운 북서풍에 영향을 받아 목요일까지 아침 기온이 영하권에 머무는 등</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">뉴시스</span>
+                            <span class="info_time">5시간28분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage3" style="display:none">
+                <a class="thumb_area" href="#" data-oid="422" data-aid="0000473406" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/422/2021/02/27/473406.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 주말 포근한 봄날씨…중부 건조·남해안 강풍">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="422" data-aid="0000473406" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 주말 포근한 봄날씨…중부 건조·남해안 강풍</strong>
+                            <p class="dsc_news">봄이 성큼 다가온 것 같습니다. 아직 오전임에도 기온이 쑥쑥 오르고 있습니다. 연휴 내내 일찍 찾아온 봄을 느끼실 수 있겠는데요. 아침에도 큰 추위 없이 5도선으로 시작했고요. 낮에는 기온이 껑충 오릅니다. 한낮에 </p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">연합뉴스TV</span>
+                            <span class="info_time">5시간35분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage4" style="display:none">
+                <a class="thumb_area" href="#" data-oid="003" data-aid="0010367143" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/003/2021/02/27/10367143.jpg?type=f719_413" onerror="this.parentNode.className += ' thumb_ready';" alt="제주, 최대 27.3m 강풍…가로등 넘어지기도">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="003" data-aid="0010367143" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">제주, 최대 27.3m 강풍…가로등 넘어지기도</strong>
+                            <p class="dsc_news">[제주=뉴시스] 양영전 기자 = 제주도에 강풍주의보가 내려진 가운데 가로등이 꺾이는 등 피해도 속출했다. 27일 제주도소방안전본부에 따르면 이날 0시13분께 서귀포시 서호동에서는 가로등이 꺾여 떨어지면서 소방이 안전</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">뉴시스</span>
+                            <span class="info_time">5시간37분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage4" style="display:none">
+                <a class="thumb_area" href="#" data-oid="119" data-aid="0002471878" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/119/2021/02/27/2471878.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[오늘날씨] 10도 안팎 포근한 날씨…강원영동 등 빗방울">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="119" data-aid="0002471878" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[오늘날씨] 10도 안팎 포근한 날씨…강원영동 등 빗방울</strong>
+                            <p class="dsc_news">토요일인 27일은 수도권과 강원영서, 충청권이 대체로 맑은 가운데 남부지방과 제주도, 강원영동은 구름이 많겠다. 기상청에 따르면 이날 오전까지 강원동해안과 경북북부동해안에는 비가 오겠고, 강원산지와 경북북동산지에는 </p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">데일리안</span>
+                            <span class="info_time">5시간54분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage4" style="display:none">
+                <a class="thumb_area" href="#" data-oid="001" data-aid="0012229770" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/001/2021/02/27/12229770.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[내주날씨] 3월 2일 전국 대부분 지역 비나 눈 소식">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="001" data-aid="0012229770" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[내주날씨] 3월 2일 전국 대부분 지역 비나 눈 소식</strong>
+                            <p class="dsc_news">(서울=연합뉴스) 이도연 기자 = 3월 첫째 주에는 전국적으로 비나 눈이 올 전망이다. 27일 기상청에 따르면 3월 2일 오전까지 수도권, 충청권, 전북권, 경북권에는 비 또는 눈이, 강원도에는 눈, 전남권과 경상권</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">연합뉴스</span>
+                            <span class="info_time">6시간25분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage4" style="display:none">
+                <a class="thumb_area" href="#" data-oid="421" data-aid="0005192096" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/421/2021/02/27/5192096.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[내일 날씨] 아침기온 낮고 낮기온 올라…일교차 최대 20도">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="421" data-aid="0005192096" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[내일 날씨] 아침기온 낮고 낮기온 올라…일교차 최대 20도</strong>
+                            <p class="dsc_news">(서울=뉴스1) 박종홍 기자 = 일요일인 28일에는 전날에 비해 아침 기온은 떨어지지만 낮 기온은 상승하면서 일교차가 클 것으로 보인다. 기상청은 이날(28일) 동해북부해상에서 동진하는 고기압의 가장자리에 들겠다며 </p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">뉴스1</span>
+                            <span class="info_time">6시간34분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage4" style="display:none">
+                <a class="thumb_area" href="#" data-oid="052" data-aid="0001556419" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/052/2021/02/27/1556419.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 전국 대체로 맑아...큰 일교차 주의">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="052" data-aid="0001556419" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 전국 대체로 맑아...큰 일교차 주의</strong>
+                            <p class="dsc_news">포근한 날씨에 마음도 설레는 주말입니다. 오늘은 어제보다 더 온화합니다. 서울 낮 기온 17도까지 올라서 4월 중순처럼 따뜻하겠는데요. 일교차가 10도 이상 크게 벌어집니다. 여벌의 옷 챙기시기 바랍니다. 대기가 무</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">YTN</span>
+                            <span class="info_time">6시간46분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage5" style="display:none">
+                <a class="thumb_area" href="#" data-oid="001" data-aid="0012229690" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/001/2021/02/27/12229690.jpg?type=f719_413" onerror="this.parentNode.className += ' thumb_ready';" alt="[내일날씨] 한낮 15도 안팎으로 포근…오후부터 차차 흐려져">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="001" data-aid="0012229690" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[내일날씨] 한낮 15도 안팎으로 포근…오후부터 차차 흐려져</strong>
+                            <p class="dsc_news">(서울=연합뉴스) 송은경 기자 = 일요일인 28일은 전국이 대체로 맑다가 오후부터 차차 흐려지겠다. 아침 최저기온은 -4∼7도, 낮 최고기온은 11∼19도로 예보됐다. 따뜻한 남풍이 불면서 낮에는 전국 대부분 지역에</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">연합뉴스</span>
+                            <span class="info_time">7시간25분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage5" style="display:none">
+                <a class="thumb_area" href="#" data-oid="422" data-aid="0000473376" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/422/2021/02/27/473376.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 연휴내내 포근…중부 건조특보·화재 주의">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="422" data-aid="0000473376" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 연휴내내 포근…중부 건조특보·화재 주의</strong>
+                            <p class="dsc_news">슬슬 겨울옷을 정리해도 좋겠습니다. 이제는 봄이 더 어울리는 듯 한데요. 아침에도 큰 추위 없이 5도선으로 시작했고요. 낮에는 기온이 크게 오르겠습니다. 서울 17도까지 오르겠습니다. 일교차는 크게 벌어집니다. 낮에</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">연합뉴스TV</span>
+                            <span class="info_time">7시간37분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage5" style="display:none">
+                <a class="thumb_area" href="#" data-oid="052" data-aid="0001556402" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/052/2021/02/27/1556402.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[날씨] 주말 포근하고 공기 깨끗...중부 건조특보, 산불 조심">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="052" data-aid="0001556402" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[날씨] 주말 포근하고 공기 깨끗...중부 건조특보, 산불 조심</strong>
+                            <p class="dsc_news">[앵커] 주말인 오늘 예년보다 포근하겠고 공기도 깨끗하겠습니다. 다만 중부 지방에 건조특보가 내려져 있어 산불에 각별히 유의해야 한다는 예본데요. 자세한 날씨 기상팀 유다현 캐스터와 알아보겠습니다. 안녕하세요, 오늘</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">YTN</span>
+                            <span class="info_time">8시간17분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage5" style="display:none">
+                <a class="thumb_area" href="#" data-oid="003" data-aid="0010366992" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/003/2021/02/27/10366992.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="부산, 흐린 날씨…이틀째 강풍·풍랑특보 발효 중">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="003" data-aid="0010366992" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">부산, 흐린 날씨…이틀째 강풍·풍랑특보 발효 중</strong>
+                            <p class="dsc_news">[부산=뉴시스] 하경민 기자 = 27일 부산지역은 대체로 흐린 날씨가 될 것으로 부산기상청은 예보했다. 아침 최저기온은 7.3도를 기록했고, 낮 최고기온은 10도를 예상됐다. 부산에는 이틀째 강풍주의보가 발효 중이다</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">뉴시스</span>
+                            <span class="info_time">8시간36분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage5" style="display:none">
+                <a class="thumb_area" href="#" data-oid="056" data-aid="0010997619" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/056/2021/02/27/10997619.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[광장 날씨] 주말 따뜻하고 공기 깨끗…내일까지 제주·남해안에 강풍">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="056" data-aid="0010997619" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[광장 날씨] 주말 따뜻하고 공기 깨끗…내일까지 제주·남해안에 강풍</strong>
+                            <p class="dsc_news"> [광장 날씨] 주말 따뜻하고 공기 깨끗…내일까지 제주·남해안에 강풍 ▶ 더 빠르고 정확한 소식을 원하시면 KBS뉴스 구독! ▶ ‘코로나19 3차 대유행’ 제대로 알아야 이긴다</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">KBS</span>
+                            <span class="info_time">8시간41분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage6" style="display:none">
+                <a class="thumb_area" href="#" data-oid="003" data-aid="0010366988" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/003/2021/02/27/10366988.jpg?type=f719_413" onerror="this.parentNode.className += ' thumb_ready';" alt="인천 맑고 포근한 날씨…건조주의보 발효 " 화재="" 주의""="">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="003" data-aid="0010366988" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">인천 맑고 포근한 날씨…건조주의보 발효 "화재 주의"</strong>
+                            <p class="dsc_news">[인천=뉴시스] 김동영 기자 = 27일 인천지역은 동해북부해상에서 동진하는 고기압의 가장자리에 들면서 맑을 것으로 보인다. 수도권기상청은 “이날 인천(강화)에는 건조주의보가 뱔효된 가운데 실효습도 35%</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">뉴시스</span>
+                            <span class="info_time">8시간54분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage6" style="display:none">
+                <a class="thumb_area" href="#" data-oid="001" data-aid="0012229640" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/001/2021/02/27/12229640.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="강원지방 산지와 영동에 눈·비 조금">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="001" data-aid="0012229640" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">강원지방 산지와 영동에 눈·비 조금</strong>
+                            <p class="dsc_news">(춘천=연합뉴스) 이종건 기자 = 27일 강원지방은 영서는 가끔 구름 많고 영동은 대체로 흐리다가 밤부터 차차 맑아지는 날씨를 보이겠다. 영동지역에는 오전까지 비가 오는 곳이 있겠으며 산지에는 눈이 조금 쌓이는 곳이</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">연합뉴스</span>
+                            <span class="info_time">9시간전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage6" style="display:none">
+                <a class="thumb_area" href="#" data-oid="003" data-aid="0010366984" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/003/2021/02/27/10366984.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="대구·경북 대체로 구름 많음…낮 8도~12도">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="003" data-aid="0010366984" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">대구·경북 대체로 구름 많음…낮 8도~12도</strong>
+                            <p class="dsc_news">[대구=뉴시스] 김정화 기자 = 대구·경북은 대체로 구름 많은 날씨가 예상된다. 27일 대구지방기상청에 따르면 이날 대구·경북은 동해 북부 해상에서 동진하는 고기압 가장자리에 들겠다. 낮 기온은 8도~12도의 분포로</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">뉴시스</span>
+                            <span class="info_time">9시간9분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage6" style="display:none">
+                <a class="thumb_area" href="#" data-oid="003" data-aid="0010366982" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/003/2021/02/27/10366982.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="주말 전북은 맑고 포근한 봄…대기 건조 불조심해야">
+                                    </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="003" data-aid="0010366982" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">주말 전북은 맑고 포근한 봄…대기 건조 불조심해야</strong>
+                            <p class="dsc_news">[전북=뉴시스]고석중 기자 = 주말인 27일 전북지역은 대체로 맑은 포근한 봄 날씨가 이어져 야외활동하기 무난하겠다. 오전 6시 현재 기온은 임실 1.2도, 장수 3.8도, 고창 4.0도, 정읍 4.1도, 부안 4.</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">뉴시스</span>
+                            <span class="info_time">9시간10분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <li class="wn_item _cnNewsPage6" style="display:none">
+                <a class="thumb_area" href="#" data-oid="056" data-aid="0010997594" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                        <img class="thumb" src="https://ssl.pstatic.net/static/weather/image/none_image.png" data-src="https://mimgnews.pstatic.net/image/origin/056/2021/02/27/10997594.jpg?type=f265_152" onerror="this.parentNode.className += ' thumb_ready';" alt="[광장 날씨] 주말 따뜻하고 공기 깨끗! 내일까지 제주·남해안에 강풍">
+                                    <span class="ico_video"><span class="blind">동영상 뉴스</span></span>
+                            <span class="play_time"><span class="blind">재생시간</span></span>
+                        </a>
+                <div class="tit_area">
+                    <div class="area_inner">
+                        <a href="#" class="link_tit" data-oid="056" data-aid="0010997594" onclick="nclk_v2(this, 'nws.reclist', '', '')">
+                            <strong class="tit_news">[광장 날씨] 주말 따뜻하고 공기 깨끗! 내일까지 제주·남해안에 강풍</strong>
+                            <p class="dsc_news"> [광장 날씨] 주말 따뜻하고 공기 깨끗! 내일까지 제주·남해안에 강풍 ▶ 더 빠르고 정확한 소식을 원하시면 KBS뉴스 구독! ▶ ‘코로나19 3차 대유행’ 제대로 알아야 이긴다</p>
+                        </a>
+                        <div class="info_media">
+                            <span class="info_press">KBS</span>
+                            <span class="info_time">9시간25분전</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+<div class="more_area ">
+    <button type="button" class="btn_more" data-next-id="_cnNewsPage2" onclick="nclk_v2(this, 'nws.nwsmore', '', '')">뉴스 더보기</button>
+</div>
+</div><div class="section_right">
+            <div class="card card_now">
+<h2 class="blind">현위치 날씨 정보</h2>
+<strong class="location">수지구 죽전동</strong>
+<div class="weather_area">
+    <i class="ico _cnLazy ico_animation_wt1" data-ico="ico_animation_wt1"></i>
+    <div class="info">
+        <em class="temperature">14<span class="degree">°</span></em>
+        <span class="weather">맑음</span>
+    </div>
+</div>
+<a href="/air/02465102" class="dust_area" onclick="nclk_v2(this, 'nws.cardair', '', '')">
+    <span class="dust_item level4_1"><span class="ttl">미세<span class="del">먼지</span> </span><span class="mark">좋음<strong>19</strong></span></span>
+        <span class="dust_item level4_1"><span class="ttl">초미세<span class="del">먼지</span> </span><span class="mark">좋음<strong>8</strong></span></span>
+        </a>
+<a href="/today/02465102" class="card_link" onclick="nclk_v2(this, 'nws.cardwth', '', '')"><span class="blind">날씨 페이지로 이동</span></a>
+</div>
+<div class="card card_nation">
+<h2 class="title">전국날씨</h2>
+<ul class="weekly_list">
+    <li class="item on">
+            <button type="button" class="button" aria-selected="true" data-date="20210227">
+                <span class="day">Sat</span>
+                <span class="date">오늘</span>
+            </button>
+        </li>
+    <li class="item">
+            <button type="button" class="button" aria-selected="false" data-date="20210228">
+                <span class="day">Sun</span>
+                <span class="date">2.28</span>
+            </button>
+        </li>
+    <li class="item">
+            <button type="button" class="button" aria-selected="false" data-date="20210301">
+                <span class="day">Mon</span>
+                <span class="date">3.1</span>
+            </button>
+        </li>
+    <li class="item">
+            <button type="button" class="button" aria-selected="false" data-date="20210302">
+                <span class="day">Tue</span>
+                <span class="date">3.2</span>
+            </button>
+        </li>
+    <li class="item">
+            <button type="button" class="button" aria-selected="false" data-date="20210303">
+                <span class="day">Wed</span>
+                <span class="date">3.3</span>
+            </button>
+        </li>
+    <li class="item">
+            <button type="button" class="button" aria-selected="false" data-date="20210304">
+                <span class="day">Thu</span>
+                <span class="date">3.4</span>
+            </button>
+        </li>
+    <li class="item">
+            <button type="button" class="button" aria-selected="false" data-date="20210305">
+                <span class="day">Fri</span>
+                <span class="date">3.5</span>
+            </button>
+        </li>
+    </ul>
+<div class="map_wrap">
+    <div class="time_area">
+        <button type="button" class="button on" data-hday="now" aria-selected="true">현재</button>
+        <button type="button" class="button" data-hday="am" aria-selected="false">오전</button>
+        <button type="button" class="button" data-hday="pm" aria-selected="false">오후</button>
+    </div>
+    <div class="nation_map">    <a href="/today/04940320" class="zone z12" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt5 "></i>
+    <span class="text">울릉/독도<em>4°</em></span>
+    <span class="blind">구름많음</span>
+</a>
+<a href="/today/14130116" class="zone z17" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt7 "></i>
+    <span class="text">제주<em>12°</em></span>
+    <span class="blind">흐림</span>
+</a>
+<a href="/today/04170690" class="zone z13" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt1 "></i>
+    <span class="text">안동<em>8°</em></span>
+    <span class="blind">맑음</span>
+</a>
+<a href="/today/02113128" class="zone z3" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt1 "></i>
+    <span class="text">수원<em>14°</em></span>
+    <span class="blind">맑음</span>
+</a>
+<a href="/today/08110580" class="zone z16" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt1 "></i>
+    <span class="text">부산<em>7°</em></span>
+    <span class="blind">맑음</span>
+</a>
+<a href="/today/13113135" class="zone z8" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt1 "></i>
+    <span class="text">전주<em>14°</em></span>
+    <span class="blind">맑음</span>
+</a>
+<a href="/today/10110101" class="zone z15" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt1 "></i>
+    <span class="text">울산<em>7°</em></span>
+    <span class="blind">맑음</span>
+</a>
+<a href="/today/05110101" class="zone z9" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt5 "></i>
+    <span class="text">광주<em>14°</em></span>
+    <span class="blind">구름많음</span>
+</a>
+<a href="/today/07110101" class="zone z7" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt1 "></i>
+    <span class="text">대전<em>12°</em></span>
+    <span class="blind">맑음</span>
+</a>
+<a href="/today/01110675" class="zone z4" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt1 "></i>
+    <span class="text">춘천<em>13°</em></span>
+    <span class="blind">맑음</span>
+</a>
+<a href="/today/09140104" class="zone z1" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt1 "></i>
+    <span class="text">서울<em>13°</em></span>
+    <span class="blind">맑음</span>
+</a>
+<a href="/today/12130127" class="zone z11" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt5 "></i>
+    <span class="text">여수<em>10°</em></span>
+    <span class="blind">구름많음</span>
+</a>
+<a href="/today/16111120" class="zone z6" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt1 "></i>
+    <span class="text">청주<em>11°</em></span>
+    <span class="blind">맑음</span>
+</a>
+<a href="/today/12110152" class="zone z10" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt5 "></i>
+    <span class="text">목포<em>12°</em></span>
+    <span class="blind">구름많음</span>
+</a>
+<a href="/today/01150615" class="zone z5" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt7 "></i>
+    <span class="text">강릉<em>6°</em></span>
+    <span class="blind">흐림</span>
+</a>
+<a href="/today/06110101" class="zone z14" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt1 "></i>
+    <span class="text">대구<em>9°</em></span>
+    <span class="blind">맑음</span>
+</a>
+<a href="/today/11720330" class="zone z2" onclick="nclk_v2(this, 'wtk.nationwide', '', '')">
+    <i class="ico ico_wt5 "></i>
+    <span class="text">백령<em>9°</em></span>
+    <span class="blind">구름많음</span>
+</a>
+</div>
+</div>
+</div><div class="card card_typhoon">
+        <h2 class="title">제 1 호 태풍 두쥐안<select id="_idTitleSelect" class="title_select" title="태풍명을 선택하세요" onclick="nclk_v2(this, 'nws.typslc', '', '')">
+                <option value="20210218150000" selected="">제 1 호 태풍 두쥐안</option>
+                <option value="20201220150000">제 23 호 태풍 크로반</option>
+                <option value="20201109150000">제 22 호 태풍 밤꼬</option>
+                <option value="20201109030000">제 21 호 태풍 아타우</option>
+                <option value="20201029210000">제 20 호 태풍 앗사니</option>
+                <option value="20201029030000">제 19 호 태풍 고니</option>
+                <option value="20201025030000">제 18 호 태풍 몰라베</option>
+                <option value="20201020090000">제 17 호 태풍 사우델</option>
+                <option value="20201012150000">제 16 호 태풍 낭카</option>
+                <option value="20201011030000">제 15 호 태풍 린파</option>
+                </select>
+        </h2>
+
+        <div class="typhoon_area">
+            <div class="typhoon_thumb">
+                <a href="https://search.naver.com/search.naver?sm=top_sly.hst&amp;fbm=1&amp;ie=utf8&amp;query=태풍 두쥐안" class="thumb_area" onclick="nclk_v2(this, 'nws.typmap', '', '')">
+                    <img src="https://weather-phinf.pstatic.net/20210222_119/typn_1613979044438QWA3V_GIF/20210218150000_20210222100000.gif" onerror="this.parentNode.className += ' thumb_ready';" class="typhoon_img" alt="">
+                </a>
+
+                <h3 class="blind">중심부근 최대풍속별 한국기상청 구분</h3>
+                <ul class="legend_list">
+                    <li class="legend_item">
+                        <span class="legend_range">~17m/s</span>
+                        <span class="legend_color"><span class="blind">열대저기압</span></span>
+                    </li>
+                    <li class="legend_item">
+                        <span class="legend_range">17~24</span>
+                        <span class="legend_color"><span class="blind">태풍 (바람3급)</span></span>
+                    </li>
+                    <li class="legend_item">
+                        <span class="legend_range">25~32</span>
+                        <span class="legend_color"><span class="blind">태풍 (바람2급)</span></span>
+                    </li>
+                    <li class="legend_item">
+                        <span class="legend_range">33~50</span>
+                        <span class="legend_color"><span class="blind">태풍 (바람1급)</span></span>
+                    </li>
+                    <li class="legend_item">
+                        <span class="legend_range">51m/s~</span>
+                        <span class="legend_color"><span class="blind">태풍 (바람1급)</span></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="typhoon_data">
+                <div class="data_area">
+                    <table class="data_table">
+                        <caption><span class="blind">태풍 정보. 최근위치, 기준일시, 진행방향, 진행속도, 중심기압, 대풍속</span></caption>
+                        <colgroup>
+                            <col class="table_title">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="table_title">최근위치</th>
+                            <td class="table_value">
+                                필리핀 세부 동북동쪽 약 210 km 부근 해상</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table_title">기준일시</th>
+                            <td class="table_value">2021년 02월 22일 09시</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table_title">진행방향</th>
+                            <td class="table_value">
+                                N</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table_title">진행속도</th>
+                            <td class="table_value">
+                                18.0 Km/h
+                                    </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table_title">중심기압</th>
+                            <td class="table_value">
+                                1004 hPa
+                                    </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table_title">최대풍속</th>
+                            <td class="table_value">
+                                15.0 m/s
+                                    </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="typhoon_route">
+                    <h3 class="route_title">예상경로</h3>
+                    <!-- [D] 더보기 클릭시 클래스 on 추가 -->
+                    <ul class="route_list on">
+                        <li class="route_item">예상경로가 없습니다.</li>
+                            </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</div><div id="footer" role="contentinfo">
+<div class="content_inner">
+    <p class="desc">본 콘텐츠의 저작권은 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다.</p>
+    <ul class="info_list">
+        <li class="item">사업자등록번호: 220-81-62517</li>
+        <li class="item">통신판매업신고번호: 220-81-62517</li>
+        <li class="item">대표이사: 한성숙 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208162517" target="_blank" class="link" onclick="nclk_v2(this, 'fot.regnum', '', '')">사업자정보 확인</a></li>
+        <li class="item">주소: 경기도 성남시 분당구 불정로 6 네이버 그린팩토리 463-867</li>
+        <li class="item">대표전화: 1588-3820</li>
+    </ul>
+    <div class="link_list">
+        <span class="link_group">
+            <a href="#" class="link" onclick="nclk_v2(this, 'fot.login', '', ''); oCommon.fnLogin(); return false;"><strong>로그인</strong></a>
+                <a href="https://m.naver.com/services.html?f=svc.weather" class="link" onclick="nclk_v2(this, 'fot.apps', '', '')">전체서비스</a>
+        </span>
+        <span class="link_group">
+            <a href="https://policy.naver.com/policy/privacy.html" class="link" onclick="nclk_v2(this, 'fot.priinfoman', '', '')">개인정보처리방침</a>
+                    <a href="https://help.naver.com/support/service/main.help?serviceNo=23599" class="link" onclick="nclk_v2(this, 'fot.report', '', '')">고객센터</a>
+                </span>
+        <span class="link_group">
+            <a href="https://www.navercorp.com/" class="link" onclick="nclk_v2(this, 'fot.naverlog', '', '')">©NAVER Corp.</a>
+        </span>
+    </div>
+</div>
+</div></div>
+    </body></html>

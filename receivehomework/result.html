@@ -1,0 +1,51 @@
+<html>
+    <body>
+        <form action="result" method="post">
+            <div>
+                <div id="nameval">Your name is</div>
+            </div>
+            <div>
+                <div>Your email is</div>
+                <div id="mailval"></div>
+            </div>
+            <div>
+                <div>Your message is</div>
+                <div id="msgval"></div>
+            </div>
+        </form>
+    </body>
+    <script>
+        function getUrlParams() {
+            var params = {};
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+            return params;
+        }
+        const ans = getUrlParams();
+        console.log(ans);
+        const it = document.getElementById("nameval");
+        it.innerHTML += " " + ans["name"];   
+    </script>
+    <script>
+        function getUrlParams() {
+            var params = {};
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+            return params;
+        }
+        let bns = getUrlParams();
+        console.log(decodeURI(bns));
+        let lt = document.getElementById("mailval");
+        lt.innerHTML += " " + decodeURIComponent(bns["email"]);
+    </script>
+    <script>
+        function getUrlParams() {
+            var params = {};
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+            return params;
+        }
+        const cns = getUrlParams();
+        console.log(cns);
+        const jt = document.getElementById("msgval");
+        x = cns["message"].replace(/\+/g, '%20'); 
+        jt.innerHTML += " " + decodeURIComponent(x);
+    </script>
+</html>

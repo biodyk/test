@@ -1,0 +1,5 @@
+body {
+    background-image: url("front.png"), url("back.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 500px;
+  }
